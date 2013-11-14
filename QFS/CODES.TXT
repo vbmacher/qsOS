@@ -1,0 +1,102 @@
+                         
+                         
+                      ANSI, ASCII, AND CHARACTOR CODES
+                               By:Jason Long
+  
+        I have always had trouble getting the Ansi and ASCII codes to get the    
+job done. I figured that most of you have had that problem too so I put    
+together a list of all that I have gotten from friends books and programs.  
+It was a lot of work and a lot of time that I had to give up to make this
+text file. I am a 13 year old boy that wants to go to a basic programming 
+class or two. As most of you know, classes and books are very expensive so   
+I am asking for any donations that you would be willing to contribute. This
+is freeware so feel free to give this to all of your friends or upload to 
+any BBS you might know.I am asking for a $5.00 donation. Any more or less 
+that you are willing to contribute would be appriciated. My address is:
+                                 
+                                 Jason Long
+                                9832 Brier ln.
+                                Santa Ana, CA
+                                   92705
+Thankyou for your support and I hope you enjoy the information.  
+  
+  
+  
+  
+  
+*****************************************************************************  
+  
+                            ANSI CODES 0 - 127
+  000   (nul)   016  (dle)   032 sp   048 0   064 @   080 P   096 `   112 p
+  001  (soh)   017  (dc1)   033 !    049 1   065 A   081 Q   097 a   113 q
+  002  (stx)   018  (dc2)   034 "    050 2   066 B   082 R   098 b   114 r
+  003  (etx)   019  (dc3)   035 #    051 3   067 C   083 S   099 c   115 s
+  004  (eot)   020  (dc4)   036 $    052 4   068 D   084 T   100 d   116 t
+  005  (enq)   021  (nak)   037 %    053 5   069 E   085 U   101 e   117 u
+  006  (ack)   022  (syn)   038 &    054 6   070 F   086 V   102 f   118 v
+  007  (bel)   023  (etb)   039 '    055 7   071 G   087 W   103 g   119 w
+  008  (bs)    024  (can)   040 (    056 8   072 H   088 X   104 h   120 x
+  009   (tab)   025  (em)    041 )    057 9   073 I   089 Y   105 i   121 y
+  010   (lf)    026   (eof)   042 *    058 :   074 J   090 Z   106 j   122 z
+  011  (vt)    027  (esc)   043 +    059 ;   075 K   091 [   107 k   123 {
+  012  (np)    028  (fs)    044 ,    060 <   076 L   092 \   108 l   124 |
+  013   (cr)    029  (gs)    045 -    061 =   077 M   093 ]   109 m   125 }
+  014  (so)    030  (rs)    046 .    062 >   078 N   094 ^   110 n   126 ~
+  015  (si)    031  (us)    047 /    063 ?   079 O   095 _   111 o   127 
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                     
+                     ASCII CHARACTER CODES 128 - 255)
+    128 €   143    158    172 ¬   186 º   200 È   214 Ö   228 ä   242 ò
+    129    144    159 Ÿ   173 ­   187 »   201 É   215 ×   229 å   243 ó
+    130 ‚   145 ‘   160     174 ®   188 ¼   202 Ê   216 Ø   230 æ   244 ô
+    131 ƒ   146 ’   161 ¡   175 ¯   189 ½   203 Ë   217 Ù   231 ç   245 õ
+    132 „   147 “   162 ¢   176 °   190 ¾   204 Ì   218 Ú   232 è   246 ö
+    133 …   148 ”   163 £   177 ±   191 ¿   205 Í   219 Û   233 é   247 ÷
+    134 †   149 •   164 ¤   178 ²   192 À   206 Î   220 Ü   234 ê   248 ø
+    135 ‡   150 –   165 ¥   179 ³   193 Á   207 Ï   221 İ   235 ë   249 ù
+    136 ˆ   151 —   166 ¦   180 ´   194 Â   208 Ğ   222 Ş   236 ì   250 ú
+    137 ‰   152 ˜   167 §   181 µ   195 Ã   209 Ñ   223 ß   237 í   251 û
+    138 Š   153 ™   168 ¨   182 ¶   196 Ä   210 Ò   224 à   238 î   252 ü
+    139 ‹   154 š   169 ©   183 ·   197 Å   211 Ó   225 á   239 ï   253 ı
+    140 Œ   155 ›   170 ª   184 ¸   198 Æ   212 Ô   226 â   240 ğ   254 ş
+    141    156 œ   171 «   185 ¹   199 Ç   213 Õ   227 ã   241 ñ   255
+    142    157 
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     
+                            CHARACTOR CODES
+     
+     Key       Code    º     Key          Code    º     Key          Code
+                       º                          º
+     Esc       1       º     A            30      º     Caps Lock    58
+     ! or 1    2       º     S            31      º     F1           59
+     @ or 2    3       º     D            32      º     F2           60
+     # or 3    4       º     F            33      º     F3           61
+     $ or 4    5       º     G            34      º     F4           62
+     % or 5    6       º     H            35      º     F5           63
+     ^ or 6    7       º     J            36      º     F6           64
+     & or 7    8       º     K            37      º     F7           65
+     * or 8    9       º     L            38      º     F8           66
+     ( or 9    10      º     : or ;       39      º     F9           67
+     ) or 0    11      º     " or '       40      º     F10          68
+     _ or -    12      º     ~ or `       41      º     F11          133
+     + or =    13      º     Left Shift   42      º     F12          134
+     Bksp      14      º     | or \       43      º     NumLock      69
+     Tab       15      º     Z            44      º     Scroll Lock  70
+     Q         16      º     X            45      º     Home or 7    71
+     W         17      º     C            46      º     Up or 8      72
+     E         18      º     V            47      º     PgUp or 9    73
+     R         19      º     B            48      º     Gray -       74
+     T         20      º     N            49      º     Left or 4    75
+     Y         21      º     M            50      º     Center or 5  76
+     U         22      º     < or ,       51      º     Right or 6   77
+     I         23      º     > or .       52      º     Gray +       78
+     O         24      º     ? or /       53      º     End or 1     79
+     P         25      º     Right Shift  54      º     Down or 2    80
+     { or [    26      º     Prt Sc or *  55      º     PgDn or 3    81
+     } or ]    27      º     Alt          56      º     Ins or 0     82
+     Enter     28      º     Spacebar     57      º     Del or .     83
+     Ctrl      29      º                          º
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ 
+
