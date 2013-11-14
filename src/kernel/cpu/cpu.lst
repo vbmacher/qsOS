@@ -1,0 +1,10 @@
+Publics by module
+
+CONTROL 	size = 205
+	_brand                            _brand_str
+	_cpuTEST                          _cpu_id
+	_vendor_str                     
+
+CPU     	size = 157
+	_checkBRAND                       _cpuPBRAND
+	_cpuPVENDOR                     

@@ -1,0 +1,37 @@
+Publics by module
+
+APP_IO  	size = 2243
+	_PATH                             _convert_fn
+	_create_app                       _deconvert_fn
+	_diskDESTROYAPP                   _diskINITAPP
+	_fclose_app                       _feof_app
+	_fgetpos_app                      _filecount_app
+	_filesize_app                     _fopen_app
+	_fread_app                        _fsetpos_app
+	_fwrite_app                       _getfname_app
+	_getpath_app                      _oldPATH
+	_remove_app                       _setpath_app
+
+BIOSDISK	size = 58
+	_biosdisk                       
+
+LOGIC_IO	size = 6218
+	_IN                               _PP
+	_clear_buffer                     _create_log
+	_data                             _decode_lp
+	_dir                              _diskDESTROYLOG
+	_diskINITLOG                      _diskcap_log
+	_encode_pp                        _file
+	_filecount_log                    _filesize_log
+	_find_db                          _find_fdb
+	_find_ffil                        _find_fin
+	_format_log                       _freespace_log
+	_get_inode                        _getfname_log
+	_read_log                         _remove_log
+	_search_file                      _write_log
+
+PHYSIC_I	size = 820
+	_SECT_COUNT                       _SPT_FDD
+	_diskDESTROYPHY                   _diskINITPHY
+	_getspt                           _read_phy
+	_verify_phy                       _write_phy
