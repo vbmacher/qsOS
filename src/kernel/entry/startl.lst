@@ -1,5 +1,0 @@
-Publics by module
-
-START   	size = 600
-	_halt                             _main_loop
-	_mem                              _print

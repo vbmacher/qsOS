@@ -1,8 +1,0 @@
-Publics by module
-
-PROCESS 	size = 468
-	_freePROCESS                      _loadPROCESS
-	_proc_addr                        _runPROCESS
-
-PROCINT 	size = 60
-	_procSET_INT                    
