@@ -254,6 +254,7 @@ int main()
  nFatSize = GetFatSize(nFATClusters);
 
  printf("\nCelkova dlzka FAT tabulky: %lg bytov.\n",nFatSize);
+ printf("\n\nPOZOR: Bootsektor v KFS nesmie mat viac ako 1514 bytov !");
  printf("\nVlozte nazov suboru s BootSektorom:");
  gets(bootFN);
 

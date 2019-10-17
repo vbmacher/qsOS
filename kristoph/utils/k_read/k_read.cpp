@@ -61,6 +61,8 @@
  *			Bug fixed with changing actual path (jumping to dirs)
  * 23.03.2002 v0.59b    Some optimizations added
  *		        Bug fixed with deleting files
+ * 03.12.2002 v0.60b    Bug fixed with creating names for new files/dirs (' ' changed with '\0')
+ *
  */
 
 #include <bios.h>     // biosdisk
@@ -396,9 +398,9 @@ void Dir(int drive,int spt,int nCurrPath)
      if (nFF->nFile[i].nBeforeDirIndex == nCurrPath)
        if (nFF->nFile[i].nIsDir == TRUE)
          if (memcmp((const void *)nFF->nFile[i].nFileName[12]," ",1) == 0)
-	   printf("\rDIR %13s%4s  : %2d\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileExt,nFF->nFile[i].nFileIndex);
+	   printf("\rDIR '%13s%4s'  : %2d\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileExt,nFF->nFile[i].nFileIndex);
 	 else
-	   printf("\rDIR %17s     : %2d\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileIndex);
+	   printf("\rDIR '%17s'     : %2d\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileIndex);
  }
  // Teraz subory...
  for (nSector=1; nSector < 33; nSector++)
@@ -413,14 +415,15 @@ void Dir(int drive,int spt,int nCurrPath)
 	 else
 	   iSize = SECTORSIZE; // Chyba - nie sectorsize, ale pocet bytov v clusteri
 	 if (memcmp((const void *)nFF->nFile[i].nFileName[12]," ",1) == 0)
-	   printf("\rFIL %13s.%4s :%2d  [%ld b]\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileExt,nFF->nFile[i].nFileIndex, iSize);
+	   printf("\rFIL '%13s.%4s' :%2d  [%ld b]\n",nFF->nFile[i].nFileName,nFF->nFile[i].nFileExt,nFF->nFile[i].nFileIndex, iSize);
 	 else {
-	   printf("\rFIL ");
+	   printf("\rFIL '");
 	   for (j = 0;j < 13; j++)
 	     printf("%c",nFF->nFile[i].nFileName[j]);
 	   printf(".");
 	   for (j = 0;j < 4; j++)
 	     printf("%c",nFF->nFile[i].nFileExt[j]);
+	   printf("'");
 	 }
       }
   }
@@ -901,7 +904,7 @@ int DeleteFile(int drive,int spt,char *nFN,int isDir)
    return 1;
  }
 
- if (memcmp(nFN, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 17) == 0) {
+ if ((memcmp(nFN, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0", 17) == 0) && (memcmp(nFN,"                 ",17) == 0)) {
    printf("\nChybny nazov suboru !!!");
    delete nFF;
    delete nFH;
@@ -964,7 +967,7 @@ int main()
 
  currentPath = 0;
 
- printf("\nKristoph Filesystem Simulator (KFSS) verzia 0.59b");
+ printf("\nKristoph Filesystem Simulator (KFSS) verzia 0.60b");
  printf("\n(c) Copyright 2001-2002, P. Jakubco ml.\n\n");
  printf("Vlozte disketu a stlacte -ENTER-.\n");
 
@@ -1008,9 +1011,8 @@ Start:
    gets(newFileName);
    printf("\nVlozte priponu suboru (max. 4 znaky):");
    gets(newFileExt);
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    strcpy(newDirName,newFileName);
-
    // Prevedieme nazov a priponu do 1 suvisleho celku
    // a prazdne znaky zamenime na nulove (0).
    for (i=13;i<=17;i++)
@@ -1021,7 +1023,7 @@ Start:
    break;
  case '1':
    printf("\nVlozte nazov adresara (max.17 znakov):");
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    gets(newDirName);
    for (i=0; i<strlen(newDirName); i++)
      newDirName[i] = toupper(newDirName[i]);
@@ -1037,7 +1039,7 @@ Start:
    gets(newFileName);
    printf("\nVlozte priponu suboru (max. 4 znaky):");
    gets(newFileExt);
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    strcpy(newDirName,newFileName);
    for (i=13;i<=17;i++)
      newDirName[i]=newFileExt[i-13];
@@ -1049,7 +1051,7 @@ Start:
    break;
  case '4':
    printf("\nVlozte nazov adresara (max.17 znakov):");
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    gets(newDirName);
    for (i=0; i<strlen(newDirName); i++)
      newDirName[i] = toupper(newDirName[i]);
@@ -1070,7 +1072,7 @@ Start:
    gets(newFileName);
    printf("\nVlozte priponu suboru (max. 4 znaky):");
    gets(newFileExt);
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    strcpy(newDirName,newFileName);
    for (i=13;i<=17;i++)
      newDirName[i]=newFileExt[i-13];
@@ -1089,7 +1091,7 @@ Start:
    gets(newFileExt);
    printf("\n\nVlozte meno suboru, do ktoreho sa obsah ulozi:");
    gets(nFileName);
-   setmem(newDirName,17,' ');
+   setmem(newDirName,17,'\0');
    strcpy(newDirName,newFileName);
    for (i=13;i<=17;i++)
      newDirName[i]=newFileExt[i-13];
