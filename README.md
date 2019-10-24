@@ -30,14 +30,14 @@ The command above will start asking you a "nickname":
 
 ![](start.png)
 
-In order to load local files onto a floppy disk, you require QFS emulator, which is a DOS program underastanding the QSS filesystem.
+In order to load local files onto a floppy disk, you require QFS emulator, which is a DOS program understanding the QSS filesystem.
 Yes, this OS uses custom filesystem, called QFS (Quick File System). In order to run it, I use DOSBox:
 
 ```
 > dosbox
 
-C:\> imgmount A floppy.flp -t floppy
 C:\> cd QSS\bin
+C:\QSS\bin> imgmount A floppy.flp -t floppy
 C:\QSS\bin> QFSEMU.EXE
 ```
 
